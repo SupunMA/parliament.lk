@@ -6,6 +6,7 @@ body {
     background-color: #111;
     color: white;
     text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar */
@@ -25,14 +26,17 @@ body {
     font-weight: bold;
 }
 
+/* Navbar Right Side */
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
 }
 
 .nav-links a {
@@ -53,26 +57,21 @@ body {
     color: white;
 }
 
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #ffcc00;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #222;
-        flex-direction: column;
         display: none;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
     }
 
     .burger {
@@ -91,36 +90,7 @@ body {
     text-shadow: 2px 2px 5px black;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-.btn {
-    margin-top: 15px;
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background: #ffcc00;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ffaa00;
-}
-
-/* Sections */
-.container {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
+/* Search Box */
 .search-box {
     width: 80%;
     max-width: 400px;
@@ -133,13 +103,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
+/* Members Section */
 .card {
     background: #222;
     padding: 20px;
@@ -152,9 +116,16 @@ body {
     transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-    background: #222;
-    padding: 15px;
-    margin-top: 50px;
+/* Dark Mode */
+.dark-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .navbar {
+    background: #ddd;
+}
+
+.dark-mode .card {
+    background: #f0f0f0;
 }
