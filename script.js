@@ -6,6 +6,12 @@ burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
 // Parliament Members Data
 const members = [
     { name: "Ranil Wickremesinghe", role: "President", party: "UNP" },
@@ -23,7 +29,9 @@ function displayMembers(filteredMembers) {
     filteredMembers.forEach(member => {
         const card = document.createElement('div');
         card.className = 'card';
-        card.innerHTML = `<h2>${member.name}</h2><p>${member.role}</p><span>${member.party}</span>`;
+        card.innerHTML = `<h2>${member.name}</h2>
+                          <p><i class="fas fa-user-tie"></i> ${member.role}</p>
+                          <span><i class="fas fa-flag"></i> ${member.party}</span>`;
         membersContainer.appendChild(card);
     });
 }
@@ -31,7 +39,9 @@ function displayMembers(filteredMembers) {
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredMembers = members.filter(member => 
-        member.name.toLowerCase().includes(searchTerm)
+        member.name.toLowerCase().includes(searchTerm) ||
+        member.role.toLowerCase().includes(searchTerm) ||
+        member.party.toLowerCase().includes(searchTerm)
     );
     displayMembers(filteredMembers);
 });
