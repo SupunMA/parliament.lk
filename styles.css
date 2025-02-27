@@ -45,6 +45,41 @@ body {
     color: #ffcc00;
 }
 
+/* Burger Menu */
+.burger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
 /* Hero Section */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?parliament,building') no-repeat center center/cover;
