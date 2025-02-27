@@ -1,3 +1,12 @@
+// Burger Menu Toggle
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Parliament Members Data
 const members = [
     { name: "Ranil Wickremesinghe", role: "President", party: "UNP" },
     { name: "Dinesh Gunawardena", role: "Prime Minister", party: "SLPP" },
