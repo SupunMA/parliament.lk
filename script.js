@@ -9,11 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Parliament Members Data
     const members = [
-        { name: "Ranil Wickremesinghe", role: "President", party: "UNP" },
-        { name: "Dinesh Gunawardena", role: "Prime Minister", party: "SLPP" },
+        { name: "Amura Kumara Dissanayake", role: "President", party: "NPP" },
+        { name: "Dr. Harini Amarasuriya", role: "Prime Minister", party: "NPP" },
         { name: "Sajith Premadasa", role: "Leader of the Opposition", party: "SJB" },
-        { name: "Mahinda Rajapaksa", role: "Former PM", party: "SLPP" },
-        { name: "Anura Kumara Dissanayake", role: "JVP Leader", party: "NPP" }
+        { name: "Dilith Jayaweera", role: "MJP Leader", party: "MJP" }
     ];
 
     const membersContainer = document.getElementById('members');
