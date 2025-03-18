@@ -2,6 +2,10 @@
 
 Welcome to the Sri Lanka Parliament Website repository! 🎉 This project is a demonstration of a website designed for the Sri Lankan Parliament. Please note that this is developed for demonstration purposes only and is not an official government website.
 
+## Visit the Site
+
+🌐 https://supunma.github.io/parliament.lk/
+
 ## 🚀 Features
 
 🏛️ Informative sections about the parliament
